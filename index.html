@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Authentication Modals -->
+  <div id="auth-overlay" class="overlay">
+    <div id="login-modal" class="modal">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Enter your institute email" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button id="login-btn">Login</button>
+      <p>First time? <span id="show-register" class="link-text">Register here</span></p>
+    </div>
+
+    <div id="register-modal" class="modal hidden">
+      <h2>Register</h2>
+      <input type="email" id="register-email" placeholder="Enter your institute email" />
+      <input type="password" id="register-password" placeholder="Password (min 6 chars)" />
+      <button id="register-btn">Register</button>
+      <p>Already registered? <span id="show-login" class="link-text">Login here</span></p>
+    </div>
+  </div>
+
+  <!-- Logout Button -->
+  <button id="logout-btn" class="logout-btn hidden">Logout</button>
+
+  <!-- Chatbot UI (untouched) -->
+  <div class="chat-wrapper">
+    <div class="chat-title">🎓 Placement Bot</div>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type a message..." />
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <!-- SDKs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1483.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .chat-wrapper {
+    width: 100%;
+    max-width: 450px;
+    height: 600px;
+    border: 3px solid #ffd700;
+    background: #1c1c1c;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #ffd70099;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-title {
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .chat-input {
+    display: flex;
+    border-top: 2px solid #ffd700;
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 12px;
+    background: #333;
+    color: #ffd700;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .chat-input button {
+    background-color: #ffd700;
+    border: none;
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .chat-input button:hover {
+    background-color: #ffe100;
+  }
+  
+  .user-msg, .bot-msg {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .user-msg {
+    align-self: flex-end;
+    background: #ffd700;
+    color: #000;
+  }
+  
+  .bot-msg {
+    align-self: flex-start;
+    background: #333;
+    color: #ffd700;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+
+  /* ----------------- Authentication Modal Styling ----------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal {
+  background-color: #1c1c1c;
+  border: 3px solid #ffd700;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  width: 300px;
+  color: #ffd700;
+  box-shadow: 0 0 20px #ffd70099;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ffd700;
+  background: #333;
+  color: #ffd700;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.modal input:focus {
+  border-color: #ffe100;
+}
+
+.modal button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #ffe100;
+}
+
+.link-text {
+  color: #ffd700;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.link-text:hover {
+  color: #ffe100;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffd700;
+  color: #000;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ffd70099;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ffe100;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  
